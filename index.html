@@ -1,47 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema de Postos de Combustível</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sistema de Postos de Combustível</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<header class="topbar">
-  <div><h1>Sistema de Postos</h1><p>Painel Administrativo</p></div>
-  <span class="status">● Sistema ativo</span>
-</header>
+<header class="topbar"><div><h1>Sistema de Postos</h1><p id="subtitulo">Painel Administrativo</p></div><span class="status">● Sistema ativo</span></header>
 <main class="container">
-  <nav class="nav-tabs">
-    <button class="nav-btn active" data-section="geral">Geral</button>
-    <button class="nav-btn" data-section="produtos">Produtos</button>
-    <button class="nav-btn" data-section="postos-admin">Postos</button>
-    <button class="nav-btn" data-section="gerentes">Gerentes</button>
-  </nav>
-
-  <section id="section-geral" class="app-section">
-    <section class="welcome"><h2 id="titulo-geral">Visão Geral</h2><p>Soma dos lançamentos de todos os postos.</p></section>
-    <section class="category-grid">
-      <article class="card"><h3>⛽ Gasolinas</h3><div class="row"><span>Gasolina ADT</span><strong id="gasolina-adt">0,00 L</strong></div><div class="row"><span>Gasolina F</span><strong id="gasolina-f">0,00 L</strong></div><div class="total">Total Gasolinas <strong id="total-gasolinas">0,00 L</strong></div></article>
-      <article class="card"><h3>🟢 Etanóis</h3><div class="row"><span>Etanol ADT</span><strong id="etanol-adt">0,00 L</strong></div><div class="row"><span>Etanol F</span><strong id="etanol-f">0,00 L</strong></div><div class="total">Total Etanóis <strong id="total-etanol">0,00 L</strong></div></article>
-      <article class="card"><h3>🔵 Diesel</h3><div class="row"><span>Diesel S500</span><strong id="diesel-s500">0,00 L</strong></div><div class="row"><span>Diesel S10</span><strong id="diesel-s10">0,00 L</strong></div><div class="total">Total Diesel <strong id="total-diesel">0,00 L</strong></div></article>
-    </section>
-    <section class="panel"><div class="panel-header"><div><h2>Postos</h2><p>Selecione um posto para consultar seus dados.</p></div><button id="btnGeral" class="active">Geral</button></div><div id="postos" class="postos-grid"></div></section>
-  </section>
-
-  <section id="section-produtos" class="app-section hidden">
-    <section class="panel"><div class="panel-header"><div><h2>Produtos</h2><p>Produtos cadastrados pelo ADM e usados pelos gerentes nos tanques.</p></div><button id="novoProduto">+ Novo produto</button></div><div id="lista-produtos" class="data-list"></div></section>
-  </section>
-
-  <section id="section-postos-admin" class="app-section hidden">
-    <section class="panel"><div class="panel-header"><div><h2>Postos</h2><p>Cadastre os postos que terão acesso ao sistema.</p></div><button id="novoPosto">+ Novo posto</button></div><div id="lista-postos" class="data-list"></div></section>
-  </section>
-
-  <section id="section-gerentes" class="app-section hidden">
-    <section class="panel"><div class="panel-header"><div><h2>Gerentes</h2><p>Cadastre cada gerente e vincule ao seu posto.</p></div><button id="novoGerente">+ Novo gerente</button></div><div id="lista-gerentes" class="data-list"></div></section>
-  </section>
-</main>
-<footer>Sistema de Postos de Combustível</footer>
-<script src="app.js"></script>
-</body>
-</html>
+<nav class="nav-tabs" id="adm-nav"><button class="nav-btn active" data-section="geral">Geral</button><button class="nav-btn" data-section="produtos">Produtos</button><button class="nav-btn" data-section="postos-admin">Postos</button><button class="nav-btn" data-section="gerentes">Gerentes</button><button class="nav-btn" data-section="gerente">Painel Gerente</button></nav>
+<section id="section-geral" class="app-section"><section class="welcome"><h2 id="titulo-geral">Visão Geral</h2><p>Soma dos lançamentos de todos os postos.</p></section><section class="category-grid"><article class="card"><h3>⛽ Gasolinas</h3><div class="row"><span>Gasolina ADT</span><strong id="gasolina-adt">0,00 L</strong></div><div class="row"><span>Gasolina F</span><strong id="gasolina-f">0,00 L</strong></div><div class="total">Total Gasolinas <strong id="total-gasolinas">0,00 L</strong></div></article><article class="card"><h3>🟢 Etanóis</h3><div class="row"><span>Etanol ADT</span><strong id="etanol-adt">0,00 L</strong></div><div class="row"><span>Etanol F</span><strong id="etanol-f">0,00 L</strong></div><div class="total">Total Etanóis <strong id="total-etanol">0,00 L</strong></div></article><article class="card"><h3>🔵 Diesel</h3><div class="row"><span>Diesel S500</span><strong id="diesel-s500">0,00 L</strong></div><div class="row"><span>Diesel S10</span><strong id="diesel-s10">0,00 L</strong></div><div class="total">Total Diesel <strong id="total-diesel">0,00 L</strong></div></article></section><section class="panel"><div class="panel-header"><div><h2>Postos</h2><p>Selecione um posto para consultar seus dados.</p></div><button id="btnGeral" class="active">Geral</button></div><div id="postos" class="postos-grid"></div></section></section>
+<section id="section-produtos" class="app-section hidden"><section class="panel"><div class="panel-header"><div><h2>Produtos</h2><p>Produtos cadastrados pelo ADM.</p></div><button id="novoProduto">+ Novo produto</button></div><div id="lista-produtos" class="data-list"></div></section></section>
+<section id="section-postos-admin" class="app-section hidden"><section class="panel"><div class="panel-header"><div><h2>Postos</h2><p>Cadastre os postos.</p></div><button id="novoPosto">+ Novo posto</button></div><div id="lista-postos" class="data-list"></div></section></section>
+<section id="section-gerentes" class="app-section hidden"><section class="panel"><div class="panel-header"><div><h2>Gerentes</h2><p>Cadastre e vincule cada gerente a um posto.</p></div><button id="novoGerente">+ Novo gerente</button></div><div id="lista-gerentes" class="data-list"></div></section></section>
+<section id="section-gerente" class="app-section hidden"><div class="manager-head"><div><h2>Painel do Gerente</h2><p id="gerente-posto">Selecione um gerente de teste.</p></div><button id="sairGerente" class="mini-btn">Voltar ao ADM</button></div><div class="manager-tabs"><button class="manager-btn active" data-manager-section="tanques">⛽ Tanques</button><button class="manager-btn" data-manager-section="reguas">📏 Réguas</button><button class="manager-btn" data-manager-section="vendas">🧾 Vendas</button></div>
+<div id="manager-tanques" class="manager-section"><div class="panel-header"><div><h3>Tanques do posto</h3><p>O gerente define quantos tanques existem e qual produto está em cada um.</p></div><button id="novoTanque">+ Novo tanque</button></div><div id="lista-tanques" class="data-list"></div></div>
+<div id="manager-reguas" class="manager-section hidden"><div class="panel-header"><div><h3>Réguas</h3><p>Lance a medição atual de cada tanque em litros.</p></div></div><div id="lista-reguas" class="data-list"></div></div>
+<div id="manager-vendas" class="manager-section hidden"><div class="panel-header"><div><h3>Vendas</h3><p>Lance os litros vendidos por produto.</p></div></div><div id="lista-vendas" class="data-list"></div></div></section></section>
+</main><footer>Sistema de Postos de Combustível</footer><script src="app.js"></script></body></html>
