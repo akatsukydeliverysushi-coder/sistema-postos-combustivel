@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Postos de Combustível</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Sistema de Postos</h1>
+      <p>Painel Administrativo</p>
+    </div>
+    <span class="status">● Sistema ativo</span>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <h2>Visão Geral</h2>
+      <p>Acompanhe os volumes lançados por todos os postos.</p>
+    </section>
+
+    <section class="category-grid">
+      <article class="card">
+        <h3>⛽ Gasolinas</h3>
+        <div class="row"><span>Gasolina ADT</span><strong id="gasolina-adt">0,00 L</strong></div>
+        <div class="row"><span>Gasolina F</span><strong id="gasolina-f">0,00 L</strong></div>
+        <div class="total">Total Gasolinas <strong id="total-gasolinas">0,00 L</strong></div>
+      </article>
+
+      <article class="card">
+        <h3>🟢 Etanóis</h3>
+        <div class="row"><span>Etanol ADT</span><strong id="etanol-adt">0,00 L</strong></div>
+        <div class="row"><span>Etanol F</span><strong id="etanol-f">0,00 L</strong></div>
+        <div class="total">Total Etanóis <strong id="total-etanol">0,00 L</strong></div>
+      </article>
+
+      <article class="card">
+        <h3>🔵 Diesel</h3>
+        <div class="row"><span>Diesel S500</span><strong id="diesel-s500">0,00 L</strong></div>
+        <div class="row"><span>Diesel S10</span><strong id="diesel-s10">0,00 L</strong></div>
+        <div class="total">Total Diesel <strong id="total-diesel">0,00 L</strong></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div><h2>Postos</h2><p>Selecione um posto para consultar seus dados.</p></div>
+        <button id="btnGeral" class="active" onclick="mostrarGeral()">Geral</button>
+      </div>
+      <div id="postos" class="postos-grid">
+        <p class="empty">Nenhum posto cadastrado ainda.</p>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Próximas etapas</h2>
+      <div class="steps">
+        <span>01 Produtos</span><span>02 Postos</span><span>03 Gerentes</span><span>04 Tanques</span><span>05 Réguas</span><span>06 Vendas</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>Sistema de Postos de Combustível</footer>
+  <script src="app.js"></script>
+</body>
+</html>
